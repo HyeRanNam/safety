@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+	<title>안전점검</title>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="css/comm.css">
+	<link rel="stylesheet" href="css/sub.css">
+</head>
+<body>
+	<section class="wrap">
+		<!-- header -->
+		<header>
+			<h1>
+				<a href="javascript:;" title="홈 바로가기">
+					<img src="img/comm/logo.png" alt="산업재해예방 안전보건공단">
+				</a>
+			</h1>
+			<a href="javascript:;" class="head btn_menu" title="메뉴">메뉴</a>
+			<a href="javascript:;" class="head btn_search" title="검색">검색</a>
+			
+			<!-- 메뉴 -->
+			<nav style="display:none;">
+				<div class="nav_list">
+					<div class="nav_header">
+						<a href="javascript:;" class="btn_home" title="home">home</a>
+					</div>
+					<article class="menu">
+						<ul>
+							<li>
+								<a href="javascript:;" class="btn_form" title="양식 만들기">양식 만들기</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="btn_check" title="점검하기">점검하기</a>
+							</li>
+							<li>
+								<a href="javascript:;"  class="btn_check_result" title="점겸결과">점겸결과</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="javascript:;" class="btn_notice" title="공지사항">공지사항</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="btn_app" title="안전보건공단앱 바로가기">안전보건공단앱 바로가기</a>
+							</li>
+						</ul>
+						<ul class="version">
+							<li>
+								<strong>버전정보</strong>
+								<span>v0.1</span>
+							</li>
+						</ul>
+					</article>
+					<a href="javascript:;" class="btn_close" title="닫기">닫기</a>
+				</div>
+			</nav>
+			<!-- //메뉴 -->
+		</header>
+		<!-- //header -->
+
+		<section class="container">
+			<!-- 탭 -->
+			<ul class="tab">
+				<li><a href="javascript:;" class="active" title="양식 만들기">양식 만들기</a></li>
+				<li><a href="javascript:;" title="점검하기">점검하기</a></li>
+				<li><a href="javascript:;" title="점검결과">점검결과</a></li>
+			</ul>
+			
+			<!--  -->
+			<div class="m_content b_list">
+				<h3 class="topic">새 양식 불러오기</h3>
+				<!-- 양식 만들기 -->
+				<div class="part form_chice">
+					<div class="photo">
+						<span><input type="file" accept="image/*"></span>
+						<img src="img/sub/img_photo_add.png" class="img_photo_add" alt="" />
+					</div>
+					<select name="" id="" title="분류 목록">
+						<option value="">분류</option>
+						<option value="">업종별 양식</option>
+						<option value="">주제별 양식</option>
+						<option value="">기계설비별 양식</option>
+						<option value="">기타양식</option>
+					</select>
+		            <input name="" type="text" value="" placeholder="점검제목" title="점검제목 입력">
+					<textarea cols="30" rows="10" placeholder="점검양식 설명" title="점검양식 설명 입력"></textarea>
+				</div>
+				<!-- 추가 -->
+				<h3 class="topic">추가</h3>
+				<div class="part">
+					<div class="sel_list">
+						<select name="" id="" title="목차 목록">
+							<option value="">목차</option>
+							<option value="">설명</option>
+							<option value="">객관식 질문(예/아니오/해당없음)</option>
+							<option value="">객관식 질문(안전/위험/해당없음)</option>
+							<option value="">주관식 질문</option>
+							<option value="">체크 질문</option>
+							<option value="">수치 질문</option>
+						</select>
+					</div>
+					<div class="part_cont">
+						<textarea cols="30" rows="10" placeholder="질문을 입력해 주세요." title="질문 입력"></textarea>
+						<input name="" type="number" value="" placeholder="가중치 ex)1" title="가중치 입력">
+					</div>
+					<div class="part_control">
+						<a href="javascript:;" class="btn_list_add" title="추가">추가</a>
+					</div>
+				</div>
+
+				<!-- 목차/설명 -->
+				<div class="part">
+					<h4 class="sel_list ">목차/설명</h4>
+					<!-- 목차입력 -->
+					<div class="ask first">
+						<textarea cols="30" rows="10" placeholder="목차를 입력해 주세요." title="목차 입력"></textarea>
+						<a href="javascript:;" class="btn_delete" title="삭제">삭제</a>
+					</div>
+
+					<!-- 설명입력 --> 
+					<div class="ask">
+						<textarea cols="30" rows="10" placeholder="설명을 입력해 주세요." title="설명 입력"></textarea>
+						<a href="javascript:;" class="btn_delete" title="삭제">삭제</a>
+					</div>
+				</div>
+
+				<!-- 질문 -->
+				<div class="part">
+					<h4 class="sel_list ">질문</h4>
+					<!-- 객관식 질문(예/아니오/해당없음) -->
+					<div class="ask first">
+						<textarea cols="30" rows="10" placeholder="질문(객관식)을 입력해 주세요." title="질문(객관식) 입력"></textarea>
+						<span class="terms">예/아니오/해당없음</span>
+						<input name="" type="number" value="" placeholder="가중치 ex)1" title="가중치">
+						<a href="javascript:;" class="btn_delete" title="삭제">삭제</a>
+					</div>
+
+					<!-- 객관식 질문(안전/위험/해당없음) -->
+					<div class="ask">
+						<textarea cols="30" rows="10" placeholder="질문(객관식)을 입력해 주세요." title="질문(객관식) 입력"></textarea>
+						<span class="terms">안전/위험/해당없음</span>
+						<input name="" type="number" value="" placeholder="가중치 ex)1" title="가중치">
+						<a href="javascript:;" class="btn_delete" title="삭제">삭제</a>
+					</div>
+
+					<!-- 주관식 질문 -->
+					<div class="ask">
+						<textarea cols="30" rows="10" placeholder="주관식 질문을 입력해 주세요." title="주관식 질문 입력"></textarea>
+						<a href="javascript:;" class="btn_delete" title="삭제">삭제</a>
+					</div>
+
+					<!-- 체크 질문 -->
+					<div class="ask">
+						<textarea cols="30" rows="10" placeholder="체크 질문을 입력해 주세요." title="체크 질문 입력"></textarea>
+						<input name="" type="number" value="" placeholder="가중치 ex)1" title="가중치">
+						<a href="javascript:;" class="btn_delete" title="삭제">삭제</a>
+					</div>
+
+					<!-- 수치 질문 -->
+					<div class="ask">
+						<textarea cols="30" rows="10" placeholder="질문(수치)를 입력해 주세요." title="질문(수치) 입력"></textarea>
+						<div class="figure">
+							<span><input name="" type="number" value="" placeholder="최소" title="최소 입력"></span>
+							<span><input name="" type="number" value="" placeholder="최대" title="최대 입력"></span>
+							<span><input name="" type="number" value="" placeholder="가중치 1" title="가중치 입력" disabled></span>
+						</div>
+						<a href="javascript:;" class="btn_delete" title="삭제">삭제</a>
+					</div>
+				</div>
+			</div>
+			<div class="buttom_control">
+				<a href="javascript:;" class="btn_cont_view" title="미리보기">미리보기</a>
+				<a href="javascript:;" class="btn btn_cont_save" title="임시저장">임시저장</a>
+				<a href="javascript:;" class="btn btn_cont_ok" title="완료">완료</a>
+				<a href="javascript:;" class="btn btn_cont_share" title="공유">공유</a>
+			</div>
+		</section>
+	</section>
+</body>
+</html>

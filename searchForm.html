@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+	<title>안전점검</title>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="css/comm.css">
+	<link rel="stylesheet" href="css/sub.css">
+</head>
+<body>
+	<section class="wrap">
+		<!-- header -->
+		<header>
+			<h1>
+				<a href="javascript:;" title="홈 바로가기">
+					<img src="img/comm/logo.png" alt="산업재해예방 안전보건공단">
+				</a>
+			</h1>
+			<a href="javascript:;" class="head btn_menu" title="메뉴">메뉴</a>
+			<a href="javascript:;" class="head btn_search" title="검색">검색</a>
+			
+			<!-- 메뉴 -->
+			<nav style="display:none;">
+				<div class="nav_list">
+					<div class="nav_header">
+						<a href="javascript:;" class="btn_home" title="home">home</a>
+					</div>
+					<article class="menu">
+						<ul>
+							<li>
+								<a href="javascript:;" class="btn_form" title="양식 만들기">양식 만들기</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="btn_check" title="점검하기">점검하기</a>
+							</li>
+							<li>
+								<a href="javascript:;"  class="btn_check_result" title="점겸결과">점겸결과</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="javascript:;" class="btn_notice" title="공지사항">공지사항</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="btn_app" title="안전보건공단앱 바로가기">안전보건공단앱 바로가기</a>
+							</li>
+						</ul>
+						<ul class="version">
+							<li>
+								<strong>버전정보</strong>
+								<span>v0.1</span>
+							</li>
+						</ul>
+					</article>
+					<a href="javascript:;" class="btn_close" title="닫기">닫기</a>
+				</div>
+			</nav>
+			<!-- //메뉴 -->
+		</header>
+		<!-- //header -->
+
+		<section class="container">
+			<!-- search form -->
+			<div class="search_form">
+				<fieldset>
+					<legend class="blind">통합검색</legend>
+					<label for="totalInput" class="blind">검색어 입력</label>
+					<input id="totalInput" type="text" maxlength="30" placeholder="검색어를 입력해 주세요." title="통합검색어 입력란" class="in_search">
+					<input type="button" value="검색하기" onclick="totalSearch();" class="nuli-img top_search_btn">
+				</fieldset>
+			</div>
+			
+			<!-- 인기검색어 -->
+			<div class="search_list" style="display:none;">
+				<strong>인기검색어</strong>
+				<ol class="popular">
+					<li><a href="javascript:;"><span>1</span>프레스</a></li>
+					<li><a href="javascript:;"><span>2</span>중량물</a></li>
+					<li><a href="javascript:;"><span>3</span>보호구</a></li>
+					<li><a href="javascript:;"><span>4</span>지게차</a></li>
+					<li><a href="javascript:;"><span>5</span>건물</a></li>
+					<li><a href="javascript:;"><span>6</span>장마철</a></li>
+					<li><a href="javascript:;"><span>7</span>작업대</a></li>
+					<li><a href="javascript:;"><span>8</span>크레인</a></li>
+					<li><a href="javascript:;"><span>9</span>인력운반</a></li>
+					<li><a href="javascript:;"><span>10</span>수리</a></li>
+				</ol>
+			</div>
+			<!-- //인기검색어 -->
+
+			<!-- 검색 결과 있을때 -->
+			<div class="search_list" style="display:none;">
+				<strong><span>프레스에</span> 대한 검색결과 입니다.</strong>
+				<p class="total">점검하기<span>(2건)</span></p>
+				<ul class="sratch_list_box">
+					<li>
+						<span class="ico_pic"></span>
+						<strong>기계프레스(확동클러치형, Positive clutch) v 1.0</strong>
+						<a href="javascript:;" class="btn_check_start" title="점검시작"><span>점검시작</span></a>
+					</li>
+					<li>
+						<span class="ico_pic"></span>
+						<strong>유압프레스(Oil-hydraulicpress) v1.0</strong>
+						<a href="javascript:;" class="btn_check_start" title="점검시작"><span>점검시작</span></a>
+					</li>
+				</ul>
+			</div>
+			<!-- //검색 결과 있을때 -->
+
+			<!-- 검색 결과 없을때 -->
+			<div class="search_list">
+				<strong><span>프레스</span>에 대한 검색결과 입니다.</strong>
+				<div class="no_data">
+					<strong class="no_search"><span>프레스</span>에 대한 검색 결과가 없습니다.</strong>
+					<p>
+						단어의 철자가 정확한지,<br/>혹은 국/영문을 바꿔서 입력하셨는지 확인해 보세요.<br/>
+						검색어의 단어수를 줄이거나, <br/>다른 검색어로 검색해 보세요.<br/>
+						보다 일반적인 검색어로 다시 검색해 보세요.
+					</p>
+				</div>
+			</div>
+			<!-- //검색 결과 없을때 -->
+		</section>
+	</section>
+</body>
+</html>

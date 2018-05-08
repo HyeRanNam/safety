@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+	<title>안전점검</title>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="css/comm.css">
+	<link rel="stylesheet" href="css/sub.css">
+</head>
+<body>
+	<section class="wrap">
+		<!-- header -->
+		<header>
+			<h1>
+				<a href="javascript:;" title="홈 바로가기">
+					<img src="img/comm/logo.png" alt="산업재해예방 안전보건공단">
+				</a>
+			</h1>
+			<a href="javascript:;" class="head btn_menu" title="메뉴">메뉴</a>
+			<a href="javascript:;" class="head btn_search" title="검색">검색</a>
+			
+			<!-- 메뉴 -->
+			<nav style="display:none;">
+				<div class="nav_list">
+					<div class="nav_header">
+						<a href="javascript:;" class="btn_home" title="home">home</a>
+					</div>
+					<article class="menu">
+						<ul>
+							<li>
+								<a href="javascript:;" class="btn_form" title="양식 만들기">양식 만들기</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="btn_check" title="점검하기">점검하기</a>
+							</li>
+							<li>
+								<a href="javascript:;"  class="btn_check_result" title="점겸결과">점겸결과</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="javascript:;" class="btn_notice" title="공지사항">공지사항</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="btn_app" title="안전보건공단앱 바로가기">안전보건공단앱 바로가기</a>
+							</li>
+						</ul>
+						<ul class="version">
+							<li>
+								<strong>버전정보</strong>
+								<span>v0.1</span>
+							</li>
+						</ul>
+					</article>
+					<a href="javascript:;" class="btn_close" title="닫기">닫기</a>
+				</div>
+			</nav>
+			<!-- //메뉴 -->
+		</header>
+		<!-- //header -->
+
+		<section class="container">
+			<section class="view_cont b_list">
+				<div class="part document_title title_view">
+					<span class="ico_pic"></span>
+					<strong>건물관리</strong>
+				</div>
+				
+				<div class="part">
+					<input type="text" placeholder="문서 번호" title="문서 번호">
+					<input type="text" placeholder="사업장명/공정명" title="사업장명/공정명">
+					<input type="text" placeholder="주소" title="주소">
+					<input type="text" placeholder="점검일" title="점검일">
+					<div class="signature">
+						<span>작성자</span>
+						<p></p>
+					</div>
+				</div>
+
+				<div class="part">
+					<!-- qu part1 -->
+					<div class="part_qu">
+						<strong class="in_topic">Q.1.작업계획서는 작성되고, 근로자에게 작성된 작업계획서 내용을 알려주었는가?</strong>
+						<div class="radio_gp">
+							<label>
+								<input type="radio" name="qu_1" checked />
+								<span class="real_label">label</span>
+								예
+							</label>
+							<label>
+								<input type="radio" name="qu_1" />
+								<span class="real_label">label</span>
+								아니오
+							</label>
+							<label>
+								<input type="radio" name="qu_1" />
+								<span class="real_label">label</span>
+								해당없음
+							</label>
+						</div>
+					</div>
+					<!-- //qu part1 -->
+
+					<!-- qu part2 -->
+					<div class="part_qu">
+						<strong class="in_topic">Q.2.작업계획서는 작성되고, 근로자에게 작성된 작업계획서 내용을 알려주었는가?</strong>
+						<div class="radio_gp">
+							<label>
+								<input type="radio" name="qu_2" checked />
+								<span class="real_label">label</span>
+								예
+							</label>
+							<label>
+								<input type="radio" name="qu_2" />
+								<span class="real_label">label</span>
+								아니오
+							</label>
+							<label>
+								<input type="radio" name="qu_2" />
+								<span class="real_label">label</span>
+								해당없음
+							</label>
+						</div>
+					</div>
+					<!-- //qu part2 -->
+
+					<!-- qu part3 -->
+					<div class="part_qu">
+						<strong class="in_topic">Q.3.작업계획서는 작성되고, 근로자에게 작성된 작업계획서 내용을 알려주었는가?</strong>
+						<div class="radio_gp">
+							<label>
+								<input type="radio" name="qu_3" checked />
+								<span class="real_label">label</span>
+								예
+							</label>
+							<label>
+								<input type="radio" name="qu_3" />
+								<span class="real_label">label</span>
+								아니오
+							</label>
+							<label>
+								<input type="radio" name="qu_3" />
+								<span class="real_label">label</span>
+								해당없음
+							</label>
+						</div>
+					</div>
+					<!-- //qu part3 -->
+				</div>
+				<div class="buttom_control">
+					<a href="javascript:;" class="btn_cont_view" title="미리보기">미리보기</a>
+					<a href="javascript:;" class="btn btn_cont_save" title="임시저장">임시저장</a>
+					<a href="javascript:;" class="btn btn_cont_ok" title="완료">완료</a>
+					<a href="javascript:;" class="btn btn_cont_share" title="공유">공유</a>
+				</div>	
+			</section>
+		</section>
+	</section>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+	<title>안전점검</title>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="css/comm.css">
+	<link rel="stylesheet" href="css/sub.css">
+	<link rel="stylesheet" href="css/pup.css">
+</head>
+<body>
+	<section class="pup_wrap">
+		<h2 class="p_header">미리보기</h2>
+		<section class="view_cont">
+			<div class="part">
+				<strong class="in_topic">기계설비 설명</strong>
+				<img src="img/sub/img_forklift.jpg" alt="" />
+				<strong class="in_topic">주요 위해위험요인</strong>
+				<p>- 운전자의 안번젤트 미착용으로 지게차가 넘어질 시 작업자가 깔리는 사고 발생의 위험이 있음.</p>
+				<strong class="in_topic">주요 관련 발령</strong>
+				<p>http://www.law.go.kr/법형/산업안전보건법/제33조(유해하거나 위험한 기계·기구 들의 방호조치 등)</p>
+			</div>
+			
+			<div class="part">
+				<div class="in_gp">
+					<label for="document_num" class="label_document">문서번호</label>
+					<input type="text" id="document_num" class="in_document" value="123456789" title="문서 번호" disabled>
+				</div>
+				<div class="in_gp company">
+					<label for="document_num" class="label_document">사업장명/<br/>공정명</label>
+					<input type="text" id="document_num" class="in_document" value="123456789" title="사업장명/공정명" disabled>
+				</div>
+				<div class="in_gp">
+					<label for="document_num" class="label_document">주소</label>
+					<input type="text" id="document_num" class="in_document" value="울산광역시 중구 종가로 400" title="주소" disabled>
+				</div>
+				<div class="in_gp">
+					<label for="document_num" class="label_document">점검일</label>
+					<input type="text" id="document_num" class="in_document" value="2017-10-21" title="점검일" disabled>
+				</div>
+				<div class="in_gp">
+					<label for="document_num" class="label_document">서명</label>
+					<input type="text" id="document_num" class="in_document" value="홍길동" title="서명" disabled>
+				</div>
+			</div>
+
+			<div class="part">
+				<!-- qu part1 -->
+				<div class="part_qu">
+					<strong class="in_topic">Q.1.작업계획서는 작성되고, 근로자에게 작성된 작업계획서 내용을 알려주었는가?</strong>
+					<div class="radio_gp">
+						<label>
+							<input type="radio" name="qu_1" checked />
+							<span class="real_label">label</span>
+							예
+						</label>
+						<label>
+							<input type="radio" name="qu_1" disabled />
+							<span class="real_label">label</span>
+							아니오
+						</label>
+						<label>
+							<input type="radio" name="qu_1" disabled />
+							<span class="real_label">label</span>
+							해당없음
+						</label>
+					</div>
+				</div>
+				<!-- //qu part1 -->
+
+				<!-- qu part2 -->
+				<div class="part_qu">
+					<strong class="in_topic">Q.2.작업계획서는 작성되고, 근로자에게 작성된 작업계획서 내용을 알려주었는가?</strong>
+					<div class="radio_gp">
+						<label>
+							<input type="radio" name="qu_2" checked />
+							<span class="real_label">label</span>
+							예
+						</label>
+						<label>
+							<input type="radio" name="qu_2" disabled />
+							<span class="real_label">label</span>
+							아니오
+						</label>
+						<label>
+							<input type="radio" name="qu_2" disabled />
+							<span class="real_label">label</span>
+							해당없음
+						</label>
+					</div>
+				</div>
+				<!-- //qu part2 -->
+
+				<!-- qu part3 -->
+				<div class="part_qu">
+					<strong class="in_topic">Q.3.작업계획서는 작성되고, 근로자에게 작성된 작업계획서 내용을 알려주었는가?</strong>
+					<div class="radio_gp">
+						<label>
+							<input type="radio" name="qu_3" checked />
+							<span class="real_label">label</span>
+							예
+						</label>
+						<label>
+							<input type="radio" name="qu_3" disabled />
+							<span class="real_label">label</span>
+							아니오
+						</label>
+						<label>
+							<input type="radio" name="qu_3" disabled />
+							<span class="real_label">label</span>
+							해당없음
+						</label>
+					</div>
+				</div>
+				<!-- //qu part3 -->
+			</div>
+		</section>
+		<a href="javascript:;" class="btn_close" title="닫기">닫기</a>
+	</section>
+</body>
+</html>

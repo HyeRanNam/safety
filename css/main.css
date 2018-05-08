@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+body {
+	background-color:#596675;
+}
+
+.box_trans {
+	position:absolute;
+	top:4.4em;
+	left:8px;
+	right:8px;
+	bottom:3.6em;
+	border-radius:10px;
+	background-color:#778996;
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+.box_trans_cont {
+	position:absolute;
+	top:7px;
+	left:7px;
+	right:7px;
+	bottom:7px;
+	border-radius:10px;
+	overflow:hidden;
+	background:url(../img/main/bg_main.png) repeat-y 0 0;
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.3);
+}
+.box_trans_cont:before {
+	content:"";
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:url(../img/main/bg_main2.png) no-repeat 0 top;
+	background-size:100% 100%;
+}
+/* bg start */
+.box_start {
+	position:relative;
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	max-width:500px;
+	background:url(../img/main/btn_start.png) no-repeat center;
+	background-size:contain;
+	z-index:1;
+}
+/* btn start */
+.btn_start {
+	position:absolute;
+	top:15%;
+	left:20%;
+	right:20%;
+	bottom:40%;
+	font-size:0;
+	text-indent:-9999999px;
+}
+/* btn_result */
+.btn_result {
+	position:absolute;
+	left:23%;
+	bottom:5%;
+	width:50%;
+	height:20%;
+	font-size:0;
+	text-indent:-9999999px;
+	background:url(../img/main/btn_result.png) no-repeat center;
+	background-size:contain;
+}
+
+/* ###### 공지사항 ##### */
+.m_notice {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	height:3.5em;
+	line-height:3.3em;
+	font-size:.85em;
+	color:#fff;
+	border-top:1px solid #3a3d4b;
+	background:url(../img/main/pattern_notice.gif) repeat 0 0;
+	background-size:.5em;
+	box-shadow:1px 0 3px rgba(0, 0, 0, 0.5);
+}
+.m_notice:before {
+	content:"";
+	display:block;
+	width:100%;
+	height:3px;
+	background:url(../img/main/inner_box_notice.png) repeat-x 0 0;
+}
+.m_notice strong {
+	position:absolute;
+	padding-left:45px;
+	color:#42a6e3;
+}
+.m_notice strong:before {
+	content:"";
+	display:block;
+	position:absolute;
+	top:8px;
+	left:8px;
+	width:30px;
+	height:30px;
+	background:url(../img/main/ico_notice.png) no-repeat 0 0;
+	background-size:100%;
+}
+.m_notice strong:after {
+	content:"";
+	display:block;
+	position:absolute;
+	top:0;
+	right:-20px;
+	width:8px;
+	height:100%;
+	background:url(../img/main/lin_notice.png) no-repeat 0 0;
+	background-size:6px 100%;
+}
+.m_notice p {
+	padding:0 10px 0 125px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-wrap:normal;
+	overflow:hidden;
+}
+
+/* 나사 이미지 */
+.img_screw {
+	position:absolute;
+	width:20px;
+	height:20px;
+	background:url(../img/main/img_screw.png) no-repeat 0 0;
+	background-size:100%;
+}
+.img_screw.top_left {
+	top:15px;
+	left:15px;
+}
+.img_screw.top_right {
+	top:15px;
+	right:15px;
+}
+.img_screw.bottom_left {
+	bottom:15px;
+	left:15px;
+}
+.img_screw.bottom_right {
+	bottom:15px;
+	right:15px;
+}
+
+
+
