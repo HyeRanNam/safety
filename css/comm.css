@@ -135,7 +135,7 @@ nav {
 	background-color:#fff;
 	box-shadow:0 1px 0 rgba(0, 0, 0, 0.1);
 }
-.menu li a {
+.menu li a {   
 	position:relative;
 	display:block;
 	padding:15px 0 15px 50px;
@@ -149,7 +149,7 @@ nav {
 .menu li a:before {
 	content:"";
 	display:block;
-	position:absolute;
+	position:absolute; 
 	top:5px;
 	left:5px;
 	width:40px;
